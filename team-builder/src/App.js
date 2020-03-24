@@ -3,10 +3,10 @@ import './App.css';
 import Form from "./components/Form"
 
 const initialTeam = [
-  { firstName: 'Jesus', lastName: 'Guerrero', email: 'imadethisoneforspam@gmail.com', role: 'Banana' },
-  { firstName: 'Johnny', lastName: 'Bravo', email: 'hunk@gmail.com', role: 'Elvis' },
-  { firstName: 'Ash', lastName: 'Ketchum', email: 'garysucks@gmail.com', role: 'Worst Trainer' },
-  { firstName: 'Jesus', lastName: 'Christ', email: 'Holyone@gmail.com', role: 'Cross man' }
+  { firstName: 'Jesus', lastName: 'Guerrero', email: 'IMadeThisOneForSpam@gmail.com', role: 'Super Dad' },
+  { firstName: 'Johnny', lastName: 'Bravo', email: 'Hunk@gmail.com', role: 'Elvis Impersonator' },
+  { firstName: 'Ash', lastName: 'Ketchum', email: 'GaryOakSucks@gmail.com', role: 'Worst Trainer' },
+  { firstName: 'Jesus', lastName: 'Christ', email: 'DontCrossMe@gmail.com', role: 'Holy Man' }
 ]
 
 function App() {
@@ -67,16 +67,21 @@ const empty = {
         />
 
         <h2>Team Members:</h2>
-
-        {team.map(member => 
+        <div className="memberBox">
+          {team.map(member => 
             
-            <div key={member.id}>
-            {member.firstName}
-            _{member.lastName}
-            , {member.email}
-            , {member.role}
+            <div className="member" key={member.id}>
+            
+            {`${member.firstName} ${member.lastName}`}
+            <br/>
+            {member.email}
+            <br/>
+            {member.role}
+            <br/>
             </div>
          )}
+         </div>
+        
       </header>
     </div>
   );

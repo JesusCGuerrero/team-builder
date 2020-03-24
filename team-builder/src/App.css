@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.member{
+  border: 1px solid black;
+  margin-bottom: 30px;
+  padding: 10px;
+  color: black;
+  background-color: rgba(142, 161, 221, 0.829);
+  border-radius: 8px;
+  width: 28%;
+}
+
+.memberBox {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
